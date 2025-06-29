@@ -99,6 +99,38 @@ body {
     outline: 2px solid #fff;
 }
 
+#openInstructions {
+    position: fixed;
+    top: 30px;
+    left: 10px;
+    z-index: 1001;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0002;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#openInstructions:hover {
+    background: #1565c0;
+}
+@media (max-width: 600px) {
+    #openInstructions {
+        top: 10px;
+        left: 5px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+    }
+}
+
 .cell {
     width: 32px;
     height: 32px;
