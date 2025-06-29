@@ -97,7 +97,7 @@ function onCellClick(e) {
             revealed[r][c] = true;
             revealAllMines();
             renderGrid();
-            message.textContent = "GAME OVER";
+            message.textContent = "TRY AGAIN";
             gameOver = true;
         } else {
             revealCell(r, c);
