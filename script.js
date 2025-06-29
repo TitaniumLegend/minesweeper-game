@@ -19,7 +19,7 @@ function initGame() {
     flagged = Array.from({length: gridSize}, () => Array(gridSize).fill(false));
     gameOver = false;
     openMode = true;
-    toggleBtn.textContent = "Mode: Open";
+    toggleBtn.textContent = "OPEN";
     message.textContent = '';
     placeMines();
     calculateNumbers();
@@ -151,7 +151,7 @@ function checkWin() {
 
 toggleBtn.addEventListener('click', function() {
     openMode = !openMode;
-    toggleBtn.textContent = openMode ? "Mode: Open" : "Mode: Flag";
+    toggleBtn.textContent = openMode ? "OPEN" : "FLAG";
 });
 
 startBtn.addEventListener('click', initGame);
