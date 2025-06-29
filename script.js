@@ -163,12 +163,24 @@ startBtn.addEventListener('click', initGame);
 // Start initial game
 const instructions = document.getElementById('instructions');
 const closeInstructionsBtn = document.getElementById('closeInstructions');
+const openInstructionsBtn = document.getElementById('openInstructions');
 
 closeInstructionsBtn.onclick = function() {
     instructions.classList.add('collapsed');
     setTimeout(() => {
         instructions.style.display = 'none';
+        openInstructionsBtn.style.display = 'flex';
         initGame(); // Start the game after closing instructions
     }, 300); // Match the CSS transition duration
 };
+
+openInstructionsBtn.onclick = function() {
+    instructions.style.display = 'flex';
+    setTimeout(() => {
+        instructions.classList.remove('collapsed');
+    }, 10); // Allow display to apply before removing class
+    openInstructionsBtn.style.display = 'none';
+};
+
+
 
