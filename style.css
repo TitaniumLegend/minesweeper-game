@@ -1,40 +1,65 @@
 body {
+    background-color: #e0f2ff;
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 30px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 #controls {
-    margin-bottom: 15px;
+    margin: 30px auto 10px auto;
+    padding: 15px 20px;
+    background: #ffffffcc;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 2px 8px #0001;
 }
 
 #toggleMode {
-    margin: 10px;
-    padding: 8px 16px;
-    font-size: 16px;
+    display: block;
+    margin: 10px auto 20px auto;
+    padding: 10px 20px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#toggleMode:hover {
+    background: #1565c0;
 }
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(8, 32px);
-    grid-template-rows: repeat(8, 32px);
-    gap: 2px;
+    gap: 3px;
     justify-content: center;
-    margin: 0 auto;
-    width: max-content;
+    background: #0d1a3a; /* Dark blue */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px #0002;
+    margin: 0 auto 20px auto;
 }
 
 .cell {
     width: 32px;
     height: 32px;
-    background: #bdbdbd;
-    border: 1px solid #888;
-    font-size: 18px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    text-align: center;
     cursor: pointer;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: background 0.2s;
+}
+
+.cell.revealed {
+    background: #90caf9;
+    color: #000;
+    cursor: default;    
 }
 
 .cell.open {
@@ -44,10 +69,18 @@ body {
 
 .cell.flagged {
     background: #ffd700;
+    color: #fff
+}
+
+.cell.mine {
+    background: #d32f2f;
+    color: #fff;
 }
 
 #message {
-    margin-top: 15px;
-    font-size: 22px;
-    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #0d1a3a;
+    min-height: 24px;
 }
