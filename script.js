@@ -161,8 +161,14 @@ toggleBtn.addEventListener('click', function() {
 startBtn.addEventListener('click', initGame);
 
 // Start initial game
-initGame();
+const instructions = document.getElementById('instructions');
+const closeInstructionsBtn = document.getElementById('closeInstructions');
 
-document.getElementById('closeInstructions').onclick = function() {
-    document.getElementById('instructions').style.display = 'none';
+closeInstructionsBtn.onclick = function() {
+    instructions.classList.add('collapsed');
+    setTimeout(() => {
+        instructions.style.display = 'none';
+        initGame(); // Start the game after closing instructions
+    }, 300); // Match the CSS transition duration
 };
+
