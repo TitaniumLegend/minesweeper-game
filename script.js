@@ -111,6 +111,10 @@ function onCellClick(e) {
         if (revealed[r][c]) return;
         flagged[r][c] = !flagged[r][c];
         renderGrid();
+        if (checkWin()) {
+            message.textContent = "YOU WON!";
+            gameOver = true;
+        }
     }
 }
 
@@ -158,3 +162,7 @@ startBtn.addEventListener('click', initGame);
 
 // Start initial game
 initGame();
+
+document.getElementById('closeInstructions').onclick = function() {
+    document.getElementById('instructions').style.display = 'none';
+};
