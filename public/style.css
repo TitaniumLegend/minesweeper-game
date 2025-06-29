@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#controls {
+    margin-bottom: 15px;
+}
+
+#toggleMode {
+    margin: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(8, 32px);
+    grid-template-rows: repeat(8, 32px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    background: #bdbdbd;
+    border: 1px solid #888;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell.open {
+    background: #e0e0e0;
+    cursor: default;
+}
+
+.cell.flagged {
+    background: #ffd700;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
