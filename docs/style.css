@@ -45,6 +45,53 @@ body {
     width: fit-content;
 }
 
+#instructions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 100vh;
+    background: #1976d2;
+    color: #fff;
+    padding: 40px 30px 30px 30px;
+    box-shadow: 2px 0 16px #0003;
+    z-index: 1000;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: Calibri, Arial, sans-sherif
+}
+
+#instructions h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#instructions ul {
+    padding-left: 18px;
+    margin-bottom: 30px;
+}
+
+#closeInstructions {
+    margin-top: auto;
+    padding: 10px 24px;
+    background: #fff;
+    color: #1976d2;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+#closeInstructions:hover {
+    background: #1565c0;
+    color: #fff;
+}
+
 .cell {
     width: 32px;
     height: 32px;
@@ -81,8 +128,9 @@ body {
 
 #message {
     text-align: center;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #0d1a3a;
-    min-height: 24px;
+    font-size: 3.9rem;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+    min-height: 32px;
 }
