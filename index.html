@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="instructions">
+        <h2> How to Play </h2>
+        <ul>
+            <li>Set the number of mines and click <b>Start Game</b>.</li>
+            <li>Click <b>OPEN</b> to reveal a cell.</li>
+            <li>Click <b>FLAG</b> to mark a cell you think has a mine.</li>
+            <li>Toggle between OPEN and FLAG to mark cells accordingly.</li>
+            <li>Reveal all safe cells to win!</li>
+            <li>Clicking a mine ends the game.</li>
+            <li>The number in a square indicates the number of mines adjacent to it.</li>
+        </ul>
+        <button id="closeInstructions">Start Playing</button>
+    </div>
     <div id="controls">
         <label for="mineCount">Number of mines (1-63): </label>
         <input type="number" id="mineCount" min="1" max="63" value="10">
