@@ -1,0 +1,88 @@
+body {
+    background-color: #0d1a3a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#controls {
+    margin: 30px auto 10px auto;
+    padding: 15px 20px;
+    background: #ffffffcc;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 2px 8px #0001;
+}
+
+#toggleMode {
+    display: block;
+    margin: 10px auto 20px auto;
+    padding: 10px 20px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#toggleMode:hover {
+    background: #1565c0;
+}
+
+#grid {
+    display: grid;
+    gap: 3px;
+    justify-content: center;
+    background: #0d1a3a; /* Dark blue */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px #0002;
+    margin: 0 auto 20px auto;
+    grid-template-columns: repeat(8, 32px);
+    width: fit-content;
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cell.revealed {
+    background: #90caf9;
+    color: #000;
+    cursor: default;    
+}
+
+.cell.open {
+    background: #e0e0e0;
+    cursor: default;
+}
+
+.cell.flagged {
+    background: #ffd700;
+    color: #fff
+}
+
+.cell.mine {
+    background: #d32f2f;
+    color: #fff;
+}
+
+#message {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #0d1a3a;
+    min-height: 24px;
+}

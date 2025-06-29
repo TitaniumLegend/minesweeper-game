@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <label for="mineCount">Number of mines (1-63): </label>
+        <input type="number" id="mineCount" min="1" max="63" value="10">
+        <button id="startBtn">Start Game</button>
+    </div>
+    <button id="toggleMode">Mode: Open</button>
+    <div id="grid"></div>
+    <div id="message"></div>
+    <script src="script.js"></script>
+</body>
+</html>
